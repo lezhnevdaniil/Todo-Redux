@@ -1,13 +1,13 @@
 import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { ChangeList } from "../ChangeList/ChangeList";
+import { useDispatch } from "react-redux";
+import ChangeList from "../ChangeList/ChangeList";
 import deleteImg from "../../img/delete.png";
 import changeImg from "../../img/change.jpg";
-import "../../styles/List.scss";
 import { useTypedSelector } from "hooks/useTypedSelector";
 import { useActionsDispatch } from "hooks/useActionsDispatch";
+import "./List.scss";
 
-export const List: React.FC = () => {
+const List: React.FC = () => {
   const dispatch = useDispatch();
   const { fetchAllLists, fetchDeleteList } = useActionsDispatch()
   const { field, lists } = useTypedSelector((state) => state.lists);
@@ -20,11 +20,9 @@ export const List: React.FC = () => {
     fetchDeleteList(id);
   };
 
-  console.log(lists)
-
   return (
     <div className="lists">
-      {lists ? (
+      {lists.length ? (
         lists.map(({ id, title, body, userId }) => (
           <div key={id} className="list">
             <div className="content">
@@ -32,7 +30,9 @@ export const List: React.FC = () => {
               <p>{body}</p>
               <p>{userId}</p>
             </div>
+
             {field === id && <ChangeList />}
+            
             <div className="buttons">
               <img
                 src={deleteImg}
@@ -55,3 +55,5 @@ export const List: React.FC = () => {
     </div>
   );
 };
+
+export default List;

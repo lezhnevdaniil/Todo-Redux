@@ -1,0 +1,7 @@
+export enum actionNameTypes {
+	ADD_FIELD = "ADD_FIELD",
+	ADD_LIST = "ADD_LIST",
+	DELETE_LIST = "DELETE_LIST",
+	CHANGE_LIST = "CHANGE_LIST",
+	ALL_LISTS = "ALL_LISTS",
+}

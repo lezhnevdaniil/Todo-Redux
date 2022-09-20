@@ -1,4 +1,5 @@
-import { actionNameTypes, actionProps, defaultStateProps } from "../../types/todo";
+import { actionNameTypes } from "constantAction/constantAction";
+import { actionProps, defaultStateProps } from "../../types/storeType/storeType";
 
 
 const defaultState: defaultStateProps = {

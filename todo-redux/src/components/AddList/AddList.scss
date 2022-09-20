@@ -1,0 +1,44 @@
+.addList {
+  margin-bottom: 30px;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    .container {
+      position: relative;
+
+      .emptyField {
+        position: absolute;
+        top: 10px;
+        left: 325px;
+      }
+
+      display: flex;
+      margin-bottom: 30px;
+
+      .containerInput {
+        height: 83px;
+        width: 200px;
+        margin: 0 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+
+        p {
+          margin: 0 0 15px 0;
+        }
+
+        input {
+          margin: 0;
+        }
+      }
+    }
+    
+    input {
+      margin: 5px 20px;
+    }
+  }
+}

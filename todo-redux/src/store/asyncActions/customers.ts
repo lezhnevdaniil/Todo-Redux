@@ -1,5 +1,6 @@
+import { actionNameTypes } from "constantAction/constantAction";
 import { Dispatch } from "redux";
-import { actionNameTypes, actionProps } from "types/todo";
+import { actionProps } from "types/storeType/storeType";
 
 export const fetchAllLists = () => {
   return (dispatch: Dispatch<actionProps>) => {
